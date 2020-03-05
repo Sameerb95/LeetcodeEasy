@@ -1,0 +1,20 @@
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        balance=0
+        cut = 0
+        for i in s:
+            if i == 'L':
+                balance -=1
+                if balance == 0:
+                    cut+=1
+            
+            else:
+                balance +=1
+                if balance == 0:
+                    cut+=1
+        return(cut)
+        
+        
+        
+Runtime: 28 ms, faster than 68.01% of Python3 online submissions for Split a String in Balanced Strings.
+Memory Usage: 12.8 MB, less than 100.00% of Python3 online submissions for Split a String in Balanced Strings.
