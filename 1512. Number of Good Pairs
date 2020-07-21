@@ -1,0 +1,14 @@
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        count =0 
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if nums[i] == nums[j]:
+                    count += 1 
+                else:
+                    continue 
+        return count
+        
+        
+Runtime: 60 ms, faster than 23.97% of Python3 online submissions for Number of Good Pairs.
+Memory Usage: 13.8 MB, less than 100.00% of Python3 online submissions for Number of Good Pairs.
