@@ -1,7 +1,6 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        highest = sorted(candies)[-1]
-        return [True if i+extraCandies >= highest else False for i in candies]
+        return [True if i+extraCandies >= max(candies) else False for i in candies]
         
 Runtime: 44 ms, faster than 38.55% of Python3 online submissions for Kids With the Greatest Number of Candies.
 Memory Usage: 13.8 MB, less than 49.02% of Python3 online submissions for Kids With the Greatest Number of Candies.
