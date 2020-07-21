@@ -1,0 +1,16 @@
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        output = [] 
+        sum = 0 
+        
+        for i in nums:
+            sum = sum + i
+            output.append(sum)
+    
+        return output
+        
+        
+        
+        
+Runtime: 52 ms, faster than 46.45% of Python3 online submissions for Running Sum of 1d Array.
+Memory Usage: 14 MB, less than 33.33% of Python3 online submissions for Running Sum of 1d Array.
