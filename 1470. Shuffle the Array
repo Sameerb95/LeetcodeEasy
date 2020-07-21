@@ -1,0 +1,9 @@
+import numpy as np
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        result = zip(nums[:n],nums[n:])
+        return list(np.array(list(result)).flatten())
+
+
+Runtime: 132 ms, faster than 6.24% of Python3 online submissions for Shuffle the Array.
+Memory Usage: 29.4 MB, less than 100.00% of Python3 online submissions for Shuffle the Array.
