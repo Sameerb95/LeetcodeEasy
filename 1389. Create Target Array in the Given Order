@@ -1,0 +1,10 @@
+class Solution:
+    def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        output = []
+        for i in range(len(nums)):
+            output.insert(index[i],nums[i])
+        return output
+        
+
+Runtime: 44 ms, faster than 26.50% of Python3 online submissions for Create Target Array in the Given Order.
+Memory Usage: 13.7 MB, less than 86.60% of Python3 online submissions for Create Target Array in the Given Order.
