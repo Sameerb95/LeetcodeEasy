@@ -1,0 +1,18 @@
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        num = str(num)
+        max1 = num
+        for i in str(num):
+            if i == '9':
+                num1 = num.replace('9','6',1)
+                if num1 > max1:
+                    max1 = num1
+            elif i == '6':
+                num1 = num.replace('6','9',1)
+                if num1 > max1:
+                    max1 = num1
+        return int(max1)
+
+
+Runtime: 28 ms, faster than 80.37% of Python3 online submissions for Maximum 69 Number.
+Memory Usage: 13.9 MB, less than 32.22% of Python3 online submissions for Maximum 69 Number.
