@@ -1,0 +1,16 @@
+class Solution:
+    def minStartValue(self, nums: List[int]) -> int:
+        dig=1
+        while dig:
+            sum = dig
+            for i in nums:
+                sum = sum + i
+                if sum < 1:
+                    dig += 1
+                    break
+            else:
+                return dig
+                
+                
+Runtime: 44 ms, faster than 39.95% of Python3 online submissions for Minimum Value to Get Positive Step by Step Sum.
+Memory Usage: 13.7 MB, less than 88.23% of Python3 online submissions for Minimum Value to Get Positive Step by Step Sum.
