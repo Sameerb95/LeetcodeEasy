@@ -1,0 +1,7 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return("".join(sorted(s)) == "".join(sorted(t)))
+        
+        
+Runtime: 48 ms, faster than 78.83% of Python3 online submissions for Valid Anagram.
+Memory Usage: 14.4 MB, less than 28.95% of Python3 online submissions for Valid Anagram.
