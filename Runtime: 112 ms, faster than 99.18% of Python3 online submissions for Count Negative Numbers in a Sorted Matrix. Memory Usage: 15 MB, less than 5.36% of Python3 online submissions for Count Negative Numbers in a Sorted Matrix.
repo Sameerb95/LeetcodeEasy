@@ -1,0 +1,8 @@
+class Solution:
+    def countNegatives(self, grid: List[List[int]]) -> int:
+        return len([i for j in grid for i in j if i<0])
+        
+     
+     
+Runtime: 112 ms, faster than 99.18% of Python3 online submissions for Count Negative Numbers in a Sorted Matrix.
+Memory Usage: 15 MB, less than 5.36% of Python3 online submissions for Count Negative Numbers in a Sorted Matrix.
