@@ -1,0 +1,8 @@
+import numpy as np
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+        return [list(1-i[::-1]) for i in np.asarray(A)]
+
+
+Runtime: 120 ms, faster than 6.47% of Python3 online submissions for Flipping an Image.
+Memory Usage: 30.1 MB, less than 5.27% of Python3 online submissions for Flipping an Image.
