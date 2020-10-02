@@ -1,0 +1,19 @@
+class Solution:
+    def buildArray(self, target: List[int], n: int) -> List[str]:
+        stack = []
+        i = 1
+        a = []
+        while i<=n:
+            if a == target:
+                break
+            if i in target:
+                stack.append('Push')
+                a.append(i)
+                i+=1
+            else:
+                stack.extend(['Push','Pop'])
+                i+=1
+        return stack
+        
+Runtime: 32 ms, faster than 69.13% of Python3 online submissions for Build an Array With Stack Operations.
+Memory Usage: 14 MB, less than 16.30% of Python3 online submissions for Build an Array With Stack Operations.
