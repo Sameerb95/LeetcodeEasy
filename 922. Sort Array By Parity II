@@ -1,0 +1,15 @@
+import numpy as np 
+class Solution:
+    def sortArrayByParityII(self, A: List[int]) -> List[int]:
+        even=[]
+        odd=[]
+        result = []
+        for i in A:
+            if i%2 ==0:
+                even.append(i)
+            else:
+                odd.append(i)
+        return (np.array(list(zip(even,odd))).flatten())
+        
+Runtime: 336 ms, faster than 16.23% of Python3 online submissions for Sort Array By Parity II.
+Memory Usage: 32.8 MB, less than 5.12% of Python3 online submissions for Sort Array By Parity II.
