@@ -1,0 +1,18 @@
+class Solution:
+    def freqAlphabets(self, s: str) -> str:
+        n=len(s)-1
+        outpu =""
+        while n >= 0:
+            if s[n] == '#':
+                outpu = chr(int(s[n-2:n])+96) + outpu
+                n-=3
+            else:
+                outpu = chr(int(s[n])+96) + outpu
+                n-=1   
+        
+        return outpu
+        
+        
+Runtime: 28 ms, faster than 81.73% of Python3 online submissions for Decrypt String from Alphabet to Integer Mapping.
+Memory Usage: 14.1 MB, less than 12.20% of Python3 online submissions for Decrypt String from Alphabet to Integer Mapping.
+Next challenges:
