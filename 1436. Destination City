@@ -1,0 +1,13 @@
+class Solution:
+    def destCity(self, paths: List[List[str]]) -> str:
+        inco =set()
+        out =set()
+        for i in range(len(paths)):
+            inco.add(paths[i][0])
+            out.add(paths[i][1])
+        
+        return out.difference(inco).pop()
+        
+        
+Runtime: 52 ms, faster than 82.31% of Python3 online submissions for Destination City.
+Memory Usage: 14.2 MB, less than 7.19% of Python3 online submissions for Destination City
