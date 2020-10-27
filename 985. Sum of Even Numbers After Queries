@@ -1,0 +1,15 @@
+ans=[]
+        S=0
+        for i in A:
+            if i%2 == 0:
+                S +=i
+        for x, k in queries:
+            if A[k] % 2 == 0: S -= A[k]
+            A[k] += x
+            if A[k] % 2 == 0: S += A[k]
+            ans.append(S)
+        return ans
+        
+        
+Runtime: 532 ms, faster than 58.98% of Python3 online submissions for Sum of Even Numbers After Queries.
+Memory Usage: 19.9 MB, less than 95.44% of Python3 online submissions for Sum of Even Numbers After Queries.
