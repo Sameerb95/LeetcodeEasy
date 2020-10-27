@@ -1,0 +1,6 @@
+class Solution:
+    def matrixReshape(self, nums: List[List[int]], r: int, c: int) -> List[List[int]]:
+        try:
+            return numpy.reshape(nums,(r,-1)).tolist()
+        except ValueError:
+            return nums
