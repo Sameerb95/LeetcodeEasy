@@ -1,0 +1,24 @@
+class Solution:
+    def binaryGap(self, n: int) -> int:
+        n1 = bin(n)[2:]
+        countl=[]
+        for i in range(len(n1)):
+            if n1[i] == '1':
+                count = 0
+                for j in range(i+1,len(n1)):
+                    #print(n1[j])
+                    if n1[j] == '0':
+                        count+=1
+                        continue
+                    elif n1[j]=='1':
+                        count+=1
+                        countl.append(count)
+                        break
+        if len(countl) == 0:
+            return(0)
+        else:
+            return(max(countl))
+            
+            
+Runtime: 28 ms, faster than 79.91% of Python3 online submissions for Binary Gap.
+Memory Usage: 14.3 MB, less than 100.00% of Python3 online submissions for Binary Gap.
