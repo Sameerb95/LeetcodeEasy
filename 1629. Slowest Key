@@ -1,0 +1,23 @@
+class Solution:
+    def slowestKey(self, releaseTimes: List[int], keysPressed: str) -> str:
+        diff = 0
+        index = 0
+        for i in range(len(releaseTimes)):
+            if i == 0 :
+                diff = releaseTimes[i]
+                #print(diff)
+                continue
+            #print(i)
+            if diff < abs(releaseTimes[i] - releaseTimes[i-1]):
+                diff = abs(releaseTimes[i] - releaseTimes[i-1])
+                #print(diff)
+                index = i
+            if diff == abs(releaseTimes[i] - releaseTimes[i-1]):
+                if keysPressed[i] > keysPressed [index]:
+                    index = i 
+                    
+        return keysPressed[index]
+        
+
+Runtime: 52 ms, faster than 89.44% of Python3 online submissions for Slowest Key.
+Memory Usage: 14.3 MB, less than 5.34% of Python3 online submissions for Slowest Key.
