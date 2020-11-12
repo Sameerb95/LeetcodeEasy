@@ -1,0 +1,25 @@
+class Solution:
+    def maxLengthBetweenEqualCharacters(self, s: str) -> int:
+        dist=[]
+        alpha = []
+        for i in range(len(s)):
+            #print(i)
+            if s[i] in s and s[i] not in alpha:
+                count=0
+                right = len(s)-1
+                while right > i:
+                    if s[i] == s[right]:
+                        dist.append((right-i)-1)
+                        alpha.append(s[i])
+                        break
+                    else:
+                        right-=1
+
+        if len(dist)==0:
+            return(-1)
+        else:
+            return(max(dist))
+            
+            
+Runtime: 20 ms, faster than 99.67% of Python3 online submissions for Largest Substring Between Two Equal Characters.
+Memory Usage: 14.1 MB, less than 100.00% of Python3 online submissions for Largest Substring Between Two Equal Characters.
