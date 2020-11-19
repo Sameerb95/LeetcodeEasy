@@ -1,0 +1,21 @@
+class Solution:
+    def bitwiseComplement(self, N: int) -> int:
+        binary = ''
+        i =0 
+        sum1 = 0
+        if N == 0:
+            return 1
+        while N != 0:
+            if str(N%2) == '0':
+                binary = '1'+binary
+                sum1 = sum1 + 1*(2**i)
+            else:
+                binary = '0'+binary
+            N = N//2
+            i +=1
+        
+        return(sum1)
+        
+        
+Runtime: 32 ms, faster than 32.56% of Python3 online submissions for Complement of Base 10 Integer.
+Memory Usage: 14.1 MB, less than 76.32% of Python3 online submissions for Complement of Base 10 Integer.
