@@ -1,0 +1,6 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        return Counter(nums).most_common()[-1][0]
+        
+Runtime: 128 ms, faster than 55.65% of Python3 online submissions for Single Number.
+Memory Usage: 16.6 MB, less than 14.31% of Python3 online submissions for Single Number.
