@@ -1,0 +1,11 @@
+class Solution:
+    def decode(self, encoded: List[int], first: int) -> List[int]:
+        ans = []
+        ans.append(first)
+        for i in range(len(encoded)):
+            ans.append(ans[i] ^ encoded[i])
+        
+        return ans
+        
+Runtime: 208 ms, faster than 99.82% of Python3 online submissions for Decode XORed Array.
+Memory Usage: 15.9 MB, less than 19.54% of Python3 online submissions for Decode XORed Array.
