@@ -1,3 +1,7 @@
 class Solution:
     def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
         return "".join(word1) == "".join(word2)
+        
+        
+Runtime: 32 ms, faster than 77.05% of Python3 online submissions for Check If Two String Arrays are Equivalent.
+Memory Usage: 14.2 MB, less than 87.40% of Python3 online submissions for Check If Two String Arrays are Equivalent.
