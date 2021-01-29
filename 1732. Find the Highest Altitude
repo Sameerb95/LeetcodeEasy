@@ -1,0 +1,14 @@
+class Solution:
+    def largestAltitude(self, gain: List[int]) -> int:
+        alt=[]
+        for i in range(len(gain)):
+            if len(alt) == 0:
+                alt.append(0)
+                alt.append(0+gain[i])
+                continue
+
+            else:
+                alt.append(alt[i]+gain[i])
+
+        return(max(alt))
+        
