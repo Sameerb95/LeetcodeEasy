@@ -1,0 +1,21 @@
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        palindrome = 0
+        d=defaultdict(int)
+        for i in s:
+            if d[i] == 0:
+                d[i]+=1
+            else:
+                d[i]-=1
+                palindrome +=2
+
+                # if d[i] == 0:
+                #     del d[i]
+        if any(d.values()) == 1: 
+            palindrome+=1
+
+        return palindrome
+        
+        
+Runtime: 28 ms, faster than 91.58% of Python3 online submissions for Longest Palindrome.
+Memory Usage: 14.4 MB, less than 5.47% of Python3 online submissions for Longest Palindrome.
