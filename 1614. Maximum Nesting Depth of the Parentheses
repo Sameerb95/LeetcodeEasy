@@ -1,0 +1,17 @@
+class Solution:
+    def maxDepth(self, s: str) -> int:
+        count = 0
+        maxn = 0
+        for i in s:
+            if i == '(':
+                count += 1
+            elif i == ')':
+                count -=1
+
+            if maxn < count:
+                maxn = count
+                
+        return maxn
+        
+Runtime: 28 ms, faster than 83.96% of Python3 online submissions for Maximum Nesting Depth of the Parentheses.
+Memory Usage: 14 MB, less than 90.18% of Python3 online submissions for Maximum Nesting Depth of the Parentheses.
