@@ -1,0 +1,15 @@
+class Solution:
+    def sumOddLengthSubarrays(self, arr: List[int]) -> int:
+        sum1 = 0
+        for i in range(len(arr)):
+            for j in range(i+1,len(arr)+1):
+                if (j-i)%2 != 0:
+                    # print(i,j)
+                    # print(arr[i:j])
+                    sum1+=sum(arr[i:j])
+        
+        return sum1
+        
+        
+Runtime: 68 ms, faster than 56.16% of Python3 online submissions for Sum of All Odd Length Subarrays.
+Memory Usage: 14.3 MB, less than 53.12% of Python3 online submissions for Sum of All Odd Length Subarrays.
