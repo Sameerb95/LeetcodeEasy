@@ -1,0 +1,39 @@
+class MinStack:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.stack = []
+        self.minimum = float('inf')
+
+    def push(self, x: int) -> None:
+        self.stack.append(x)
+        if self.minimum > x:
+            self.minimum = x
+
+    def pop(self) -> None:
+        self.stack.pop()
+        if len(self.stack) != 0: 
+            self.minimum = min(self.stack)
+        else:
+            self.minimum = float('inf')
+
+    def top(self) -> int:
+        return(self.stack[-1])
+
+    def getMin(self) -> int:
+        return self.minimum
+
+
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(x)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
+
+
+
+Runtime: 52 ms, faster than 96.35% of Python3 online submissions for Min Stack.
+Memory Usage: 17.9 MB, less than 86.57% of Python3 online submissions for Min Stack.
