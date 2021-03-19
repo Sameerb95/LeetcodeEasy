@@ -1,0 +1,17 @@
+class Solution:
+    def countBalls(self, lowLimit: int, highLimit: int) -> int:
+        sum1 =0 
+        balls = [0]*(highLimit+2)
+        for i in range(lowLimit,highLimit+1):
+            while i >= 10:
+                sum1 += i%10
+                i = i//10
+            sum1+=i
+            # if sum1 == 10:
+            #     sum1 =1
+            balls[sum1]+=1
+            sum1=0
+        return max(balls)
+  
+Runtime: 400 ms, faster than 94.51% of Python3 online submissions for Maximum Number of Balls in a Box.
+Memory Usage: 15.2 MB, less than 6.07% of Python3 online submissions for Maximum Number of Balls in a Box.
