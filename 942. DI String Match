@@ -1,0 +1,19 @@
+class Solution:
+    def diStringMatch(self, S: str) -> List[int]:
+        nums = list(range(len(S)+1))
+        output = []
+        i1 = 0
+        d = len(S)
+        for i in S:
+            if i == 'I':
+                output.append(nums[i1])
+                i1+=1
+            elif i =='D':
+                output.append(nums[d])
+                d-=1
+        output.append(i1)
+        return output
+        
+        
+Runtime: 56 ms, faster than 96.48% of Python3 online submissions for DI String Match.
+Memory Usage: 15.3 MB, less than 21.71% of Python3 online submissions for DI String Match.
