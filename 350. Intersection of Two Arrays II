@@ -1,0 +1,26 @@
+class Solution(object):
+    def intersect(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        d = defaultdict(int)
+        ans = []
+        if len(nums1) > len(nums2):
+            long_list,short_list = nums1,nums2
+        else:
+            long_list,short_list = nums2,nums1
+
+        for j in long_list:
+            d[j]+=1    
+        # print(d) 
+        for j in short_list:
+            if j in d and d[j] != 0:
+                d[j]-=1
+                ans.append(j)
+            
+        return ans 
+  
+Runtime: 28 ms, faster than 94.66% of Python online submissions for Intersection of Two Arrays II.
+Memory Usage: 13.8 MB, less than 22.98% of Python online submissions for Intersection of Two Arrays II.
