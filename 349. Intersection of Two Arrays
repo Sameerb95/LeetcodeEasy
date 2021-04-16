@@ -1,0 +1,13 @@
+class Solution(object):
+    def intersection(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        
+        return set(nums1).intersection(set(nums2))
+        
+        
+Runtime: 32 ms, faster than 68.65% of Python online submissions for Intersection of Two Arrays.
+Memory Usage: 13.6 MB, less than 64.82% of Python online submissions for Intersection of Two Arrays.
